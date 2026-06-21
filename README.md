@@ -6,6 +6,8 @@
 [![download](https://img.shields.io/github/downloads/T1NG4/TGS-SPRAY-interception-releases/total?label=downloads&style=flat-square)](https://github.com/T1NG4/TGS-SPRAY-interception-releases/releases)
 [![Windows](https://img.shields.io/badge/Windows-10%2F11-blue?logo=windows&style=flat-square)]()
 
+![SPRAY INTERCEPTION rodando em jogo](assets/in-game.jpg)
+
 <!-- COLOCAR PRINT OU GIF DA APLICAÇÃO AQUI -->
 
 ---
