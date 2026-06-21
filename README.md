@@ -116,24 +116,14 @@ O SPRAY INTERCEPTION verifica novas versões sempre que é aberto. Se houver uma
 
 ---
 
-## Desenvolvimento
-
-O código-fonte está no repositório principal:
-
-**[github.com/T1NG4/TGS-SPRAY-interception](https://github.com/T1NG4/TGS-SPRAY-interception)**
-
-Este repositório (`TGS-SPRAY-interception-releases`) é apenas para distribuição dos instaladores.
-
----
-
 ## Licença
 
-Uso pessoal. Consulte o repositório de código para detalhes.
+Uso pessoal.
 
 ---
 
 ## Contato
 
-Encontrou um bug ou tem uma sugestão? Abra uma issue no repositório de código-fonte:
+Encontrou um bug ou tem uma sugestão? Abra uma issue:
 
 **[github.com/T1NG4/TGS-SPRAY-interception/issues](https://github.com/T1NG4/TGS-SPRAY-interception/issues)**
