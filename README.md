@@ -1,6 +1,6 @@
 # SPRAY INTERCEPTION
 
-> Ferramenta de compensação de recoil universal para Windows.
+> Utilitário de compensação de recoil para Windows — interface escura, HUD in-game e atualização automática.
 
 [![versão](https://img.shields.io/github/v/release/T1NG4/TGS-SPRAY-interception-releases?include_prereleases&label=versão&style=flat-square)](https://github.com/T1NG4/TGS-SPRAY-interception-releases/releases/latest)
 [![download](https://img.shields.io/github/downloads/T1NG4/TGS-SPRAY-interception-releases/total?label=downloads&style=flat-square)](https://github.com/T1NG4/TGS-SPRAY-interception-releases/releases)
@@ -8,19 +8,41 @@
 
 ![SPRAY INTERCEPTION rodando em jogo](assets/in-game.jpg)
 
-<!-- COLOCAR PRINT OU GIF DA APLICAÇÃO AQUI -->
-
 ---
 
 ## O que é
 
-O **SPRAY INTERCEPTION** é um utilitário para Windows que compensa recoil de armas de forma controlada e suave. Ele atua com movimentos periódicos no cursor, permitindo ajustar offsets, intervalos, jitter, rampa e atraso inicial para diferentes armas e jogos.
+O **SPRAY INTERCEPTION** é um aplicativo para Windows que aplica compensação de recoil no cursor, com movimento suave e humanizado. Não lê memória do jogo, não injeta código e não altera arquivos — só move o mouse via driver de input.
 
-- Compensação de recoil configurável
-- Biblioteca de armas personalizável
-- Perfis com atalhos rápidos (primária/secundária)
-- Atualizações automáticas
-- Interface escura e minimalista
+Recursos atuais (v1.5+):
+
+- Compensação configurável (offset X/Y, intervalo, jitter, rampa, atraso, humanização)
+- Biblioteca de armas com mira simples ou híbrida (1x / 2x / 3x / 3.5x / 4x)
+- Recoil **Normal** ou **Advanced** por arma e por zoom
+- Perfil com slots **primária / secundária** e binds no jogo
+- Rapid Fire, lanterna automática e strobe
+- HUD overlay in-game (posição arrastável)
+- Filtro de processo, ADS (segurar ou alternar RMB) e hotkeys
+- Conta com plano **Free** ou **Pro**
+- Import/export de configs (Pro)
+- Atualizações automáticas pelo GitHub Releases
+
+---
+
+## Planos
+
+| | **Free** | **Pro** |
+|---|---|---|
+| Perfis | 1 | Ilimitados |
+| Armas na biblioteca | 3 | Ilimitadas |
+| Tempo de uso | 20 min/dia (tiro efetivo) | Ilimitado |
+| Import / export de configs | Não | Sim |
+| Presets | Não | Sim |
+
+**Pro mensal:** R$ 19,90/mês  
+**Pro anual:** R$ 179,10 (12 meses pelo preço de 9)
+
+Pagamento **dentro do app**, com conta (email + senha). Hoje o checkout é **Bitcoin** (BlueWallet); o plano ativa sozinho após a confirmação on-chain. Pix volta em breve.
 
 ---
 
@@ -28,7 +50,7 @@ O **SPRAY INTERCEPTION** é um utilitário para Windows que compensa recoil de a
 
 - Windows 10 ou 11 (x64)
 - Privilégios de Administrador (necessário para o driver de input)
-- Driver Interception (o instalador cuida disso na primeira execução)
+- Driver Interception (o instalador e o próprio app cuidam disso)
 
 ---
 
@@ -38,94 +60,132 @@ Baixe a versão mais recente:
 
 **[⬇ SPRAY INTERCEPTION Setup](https://github.com/T1NG4/TGS-SPRAY-interception-releases/releases/latest)**
 
+Arquivo: `SPRAY-INTERCEPTION-Setup-x.x.x.exe`
+
 ---
 
 ## Instalação
 
-1. Baixe o arquivo `SPRAY-INTERCEPTION-Setup-x.x.x.exe`.
-2. Execute o instalador como Administrador.
-3. Siga as telas de instalação.
-4. Ao concluir, marque a opção **"Executar o SPRAY INTERCEPTION"**.
-
-> O instalador instala o app para todos os usuários da máquina (`C:\Program Files\SPRAY INTERCEPTION`).
+1. Baixe o instalador na página de releases.
+2. Execute como Administrador.
+3. Siga as telas (pode escolher a pasta; padrão: `C:\Program Files\SPRAY INTERCEPTION`).
+4. Ao concluir, marque **"Executar o SPRAY INTERCEPTION"**.
 
 ---
 
 ## Primeira execução
 
-Na primeira vez que abrir, o aplicativo verifica e instala o driver **Interception** automaticamente. Se o Windows pedir confirmação, aceite a instalação do driver.
+1. O app pede **login ou cadastro** (email + senha). Sem conta não entra na interface principal.
+2. Na primeira vez, verifica e instala o driver **Interception**. Se o Windows pedir confirmação, aceite.
+3. Se o driver pedir, **reinicie o PC** e abra o app de novo como Administrador.
 
-<!-- COLOCAR PRINT DA TELA DE CARREGAMENTO AQUI -->
+Na aba **Misc** você pode ver o status do driver e **reinstalar** se algo falhar.
 
 ---
 
 ## Como usar
 
-### Controles principais
+### Abas
+
+| Aba | Função |
+|-----|--------|
+| **Recoil** | Parâmetros globais (offsets, intervalo, jitter, ramp, atraso, humanização) |
+| **Perfil** | Primária/secundária, binds no jogo, recoil do perfil vs global, modo Advanced |
+| **Armas** | Biblioteca: criar/editar armas, mira simples/híbrida, Rapid Fire, Advanced |
+| **Misc** | Filtro de processo, driver, ADS, Rapid Fire padrão, lanterna, mira híbrida, posição da HUD, hotkeys |
+| **Config** | Salvar/carregar configs; importar e exportar (Pro) |
+
+### Controles padrão
 
 | Ação | Atalho |
 |------|--------|
 | Ligar / Desligar | `INSERT` |
 | Capturar janela em foco | `F8` |
-| Selecionar arma primária | `1` |
-| Selecionar arma secundária | `2` |
+| Selecionar arma primária | `1` (customizável no perfil) |
+| Selecionar arma secundária | `2` (customizável no perfil) |
 
-### Ajustes recomendados
+A HUD no canto da tela mostra o slot ativo e o zoom quando o compensador está ligado.
 
-1. Vá na aba **Recoil Control** para ajustar os parâmetros globais.
-2. Crie suas armas na aba **Perfil** → **Biblioteca de Armas**.
-3. Monte perfis escolhendo a arma primária e secundária.
-4. Ative o uso de recoil por perfil para trocar automaticamente entre armas.
+### Fluxo recomendado
+
+1. Na aba **Misc**, defina o processo do jogo (ex.: `cs2.exe`) ou use `F8` com o jogo em foco.
+2. Ajuste o recoil global na aba **Recoil**, ou ligue **Usar recoil do perfil**.
+3. Crie armas na aba **Armas** (mira, zoom, Rapid Fire, Advanced se quiser).
+4. No **Perfil**, encaixe primária e secundária e capture as teclas do jogo.
+5. `INSERT` para ligar. A HUD confirma o slot ativo.
 
 ---
 
 ## Atualizações automáticas
 
-O SPRAY INTERCEPTION verifica novas versões sempre que é aberto. Se houver uma atualização, ela é baixada e instalada automaticamente, sem a necessidade de baixar manualmente.
+O SPRAY INTERCEPTION verifica novas versões ao abrir. Se houver update, baixa e instala sozinho a partir deste repositório — não precisa baixar o setup de novo.
 
 ---
 
 ## Desinstalação
 
-1. Vá em **Configurações → Aplicativos → Aplicativos instalados**.
-2. Procure por **SPRAY INTERCEPTION**.
-3. Clique em **Desinstalar**.
+1. **Configurações → Aplicativos → Aplicativos instalados**
+2. Procure **SPRAY INTERCEPTION**
+3. **Desinstalar**
+
+Para remover o driver (opcional):
+
+```
+install-interception.exe /uninstall
+```
+
+Reinicie o PC depois.
 
 ---
 
 ## Solução de problemas
 
-### O app não abre
+### O app não abre / pede admin
 
-- Certifique-se de executar como **Administrador**.
-- Verifique se o antivírus não bloqueou o `SPRAY INTERCEPTION.exe` ou `InputHostCore.exe`.
+- Execute como **Administrador**.
+- Libere `SPRAY INTERCEPTION.exe` e `InputHostCore.exe` no antivírus.
 
-### O driver não instala
+### Backend offline / driver não sobe
 
-- Execute o app novamente como Administrador.
-- Se o problema persistir, abra o prompt como Administrador e rode:
+- Abra de novo como Administrador.
+- Em **Misc → Driver Interception**, clique em **Verificar** ou **Reinstalar**.
+- Se pedir reboot, reinicie o PC.
+- No prompt como Admin:
   ```
   sc query keyboard
   sc query mouse
   ```
-  Se retornar `RUNNING`, o driver está ativo.
+  `RUNNING` = driver ativo.
 
-### O recoil não está sendo compensado
+### Recoil não compensa
 
-- Verifique se o app está **ligado** (INSERT).
-- Confirme o processo/janela correto na aba **Filtro de Processo**.
-- Ajuste os offsets conforme a arma.
+- Confirme que está **ligado** (`INSERT`) e que a HUD aparece.
+- Confira o processo na aba **Misc**.
+- Se usar perfil, ligue **Usar recoil do perfil** e selecione as armas.
+- Se **ADS** estiver ligado, segure ou alterne o RMB conforme o modo.
+
+### Plano Free / Pro
+
+- Cadastre-se e pague **dentro do app** (botão do plano no canto).
+- Depois do pagamento Bitcoin, espere a confirmação na rede e clique em **Atualizar plano**.
+- Free: 20 min/dia de tiro efetivo, 1 perfil e 3 armas.
+
+---
+
+## Aviso
+
+Uso em jogos online competitivos pode violar os termos do jogo e resultar em banimento. Use por sua conta e risco. O software é fornecido para treino, PvE, servidores privados e acessibilidade — sem garantia de indetectabilidade.
 
 ---
 
 ## Licença
 
-Uso pessoal.
+Uso pessoal. Termos completos aparecem no instalador.
 
 ---
 
 ## Contato
 
-Encontrou um bug ou tem uma sugestão? Abra uma issue:
+Bug ou sugestão? Abra uma issue neste repositório:
 
-**[github.com/T1NG4/TGS-SPRAY-interception/issues](https://github.com/T1NG4/TGS-SPRAY-interception/issues)**
+**[github.com/T1NG4/TGS-SPRAY-interception-releases/issues](https://github.com/T1NG4/TGS-SPRAY-interception-releases/issues)**
