@@ -50,7 +50,7 @@ Em jogos online competitivos (Vanguard, BattlEye, Easy Anti-Cheat, Ricochet etc.
 
 | Plano | Limites |
 |-------|---------|
-| **Free** | 1 perfil · 3 armas · 20 min/dia (tiro efetivo) |
+| **Free** | 1 perfil · 3 armas · 10 tokens/dia (tiro efetivo) |
 | **Pro** | Perfis e armas ilimitados · uso ilimitado · import/export |
 
 A licença é **pessoal, intransferível** e vinculada à conta.  
