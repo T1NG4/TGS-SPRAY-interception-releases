@@ -35,7 +35,7 @@ Recursos atuais (v1.5+):
 |---|---|---|
 | Perfis | 1 | Ilimitados |
 | Armas na biblioteca | 3 | Ilimitadas |
-| Tempo de uso | 20 min/dia (tiro efetivo) | Ilimitado |
+| Tempo de uso | 10 tokens/dia (tiro efetivo) | Ilimitado |
 | Import / export de configs | Não | Sim |
 | Presets | Não | Sim |
 
@@ -168,7 +168,7 @@ Reinicie o PC depois.
 
 - Cadastre-se e pague **dentro do app** (botão do plano no canto).
 - Depois do pagamento Bitcoin, espere a confirmação na rede e clique em **Atualizar plano**.
-- Free: 20 min/dia de tiro efetivo, 1 perfil e 3 armas.
+- Free: 10 tokens/dia de tiro efetivo, 1 perfil e 3 armas.
 
 ---
 
